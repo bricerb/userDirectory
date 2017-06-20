@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/user.css">
+  </head>
+  <body>
+    <a href="/"><div class="link-button">
+      <p class="link-text">Return to Directory</p>
+    </div></a>
+    <div class="container">
+
+      <div class="profile">
+        <img src="{{avatar}}">
+        <div class="personal-information">
+          <h1>{{name}}</h1>
+          <p class="profile-text">
+            {{#address}}
+            {{#city}}
+              {{city}},
+            {{/city}}
+            {{country}}
+            {{/address}}
+            |
+            {{#job}}
+              {{job}}, {{company}}
+            {{/job}}
+            {{^job}}
+              <span class="unemployed">Available for Hire</span>
+            {{/job}}
+          </p class="profile-text">
+          <p class="profile-text">
+            {{email}} | {{phone}}
+          </p class="profile-text">
+        </div>
+      </div>
+
+      <div class="details">
+        {{#university}}
+        <div class="details-text">
+          <p class="details-paragraph"><b>Education</b></p>
+          <p class="details-paragraph">{{university}}</p>
+        </div>
+        {{/university}}
+        <div class="details-text">
+          <p class="details-paragraph"><b>Skills</b></p>
+          <p class="details-paragraph">
+            {{#skills}}
+              <p>{{skills}}</p>
+            {{/skills}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- <a href="#"></a> -->
+      {{#users}}
+          <div class="cell">
+            <a href="/{{id}}" class="cell-link"></a>
+            <img src="{{avatar}}">
+            <h2>{{name}}</h2>
+            {{#job}}
+              <p class="employed">{{job}}, {{company}}<p>
+            {{/job}}
+            {{^job}}
+              <p class="unemployed">Available for hire</p>
+            {{/job}}
+          </div>
+      {{/users}}
+    </div>
+
+    <!-- <script src="/directory.js" charset="utf-8"></script> -->
+  </body>
+</html>
