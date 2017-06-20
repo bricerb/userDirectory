@@ -16,38 +16,56 @@
         <div class="personal-information">
           <h1>{{name}}</h1>
           <p class="profile-text">
+            <!-- Address field in the user object -->
             {{#address}}
+
+            <!-- City field in the user object -->
             {{#city}}
+            <!-- If not null/empty, place the city in here -->
               {{city}},
             {{/city}}
+
+            <!-- Country field in the user object -->
             {{country}}
+
+            <!-- Address field in the user object -->
             {{/address}}
             |
+            <!-- Job field in the user object -->
             {{#job}}
+            <!-- if no null/empty, place the job, company in here -->
               {{job}}, {{company}}
             {{/job}}
+
+            <!-- if job field is null/empty -->
             {{^job}}
+            <!-- place this text in here -->
               <span class="unemployed">Available for Hire</span>
             {{/job}}
           </p class="profile-text">
           <p class="profile-text">
+            <!-- Email and Phone fields in the user object -->
             {{email}} | {{phone}}
           </p class="profile-text">
         </div>
       </div>
 
       <div class="details">
+        <!-- University field in the user object -->
         {{#university}}
         <div class="details-text">
           <p class="details-paragraph"><b>Education</b></p>
+          <!-- place university in here -->
           <p class="details-paragraph">{{university}}</p>
         </div>
         {{/university}}
         <div class="details-text">
           <p class="details-paragraph"><b>Skills</b></p>
           <p class="details-paragraph">
+            <!-- Skills fields in the user object -->
             {{#skills}}
-              <p>{{skills}}</p>
+              <!-- if skills field is not null/empty -->
+                <p>{{.}}</p>
             {{/skills}}
           </p>
         </div>
